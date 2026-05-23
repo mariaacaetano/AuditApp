@@ -25,7 +25,7 @@ DEBUG = os.environ.get("DEBUG", "True").lower() == "true"
 
 ALLOWED_HOSTS = [
     host.strip()
-    for host in os.environ.get("ALLOWED_HOSTS", "localhost,127.0.0.1,backend","https://auditapp.lsx.li").split(",")
+    for host in os.environ.get("ALLOWED_HOSTS", "localhost,127.0.0.1,backend,auditapp.lsx.li")
     if host.strip()
 ]
 

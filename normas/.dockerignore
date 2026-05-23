@@ -1,0 +1,19 @@
+# Ambientes virtuais locais
+venv/
+.venv/
+env/
+
+# Arquivos temporários do Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Controle de versão local e IDEs
+.git
+.gitignore
+.vscode/
+.idea/
+
+# Banco de dados local para testes rápidos (se houver)
+*.sqlite3

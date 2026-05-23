@@ -1,0 +1,18 @@
+# Dependências instaladas localmente na sua máquina
+node_modules/
+npm-debug.log
+
+# Pastas de build locais
+dist/
+build/
+
+# Configurações de desenvolvimento e IDEs
+.vscode/
+.idea/
+.env
+.env.local
+
+# Git e logs
+.git
+.gitignore
+.github/

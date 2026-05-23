@@ -1,0 +1,382 @@
+/* ============================================================
+   Botão de relatório no header do dashboard
+   ============================================================ */
+
+.audit-dashboard-header__actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.audit-dashboard-header .audit-dashboard-btn-relatorio {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 16px;
+  background: #6B0F2B;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, opacity 0.15s;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.audit-dashboard-header .audit-dashboard-btn-relatorio:hover {
+  background: #8a081e;
+}
+
+.audit-dashboard-header .audit-dashboard-btn-relatorio:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.audit-dashboard-header .audit-dashboard-btn-relatorio svg {
+  flex-shrink: 0;
+}
+
+/* Spinner */
+@keyframes relatorio-spin {
+  to { transform: rotate(360deg); }
+}
+.relatorio-modal__spin {
+  animation: relatorio-spin 0.8s linear infinite;
+}
+
+/* ============================================================
+   Overlay e Modal
+   ============================================================ */
+
+.relatorio-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 16px;
+}
+
+.relatorio-modal {
+  background: #fff;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 480px;
+  max-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+/* Header */
+.relatorio-modal__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 20px 20px 16px;
+  border-bottom: 1px solid #f0f0f0;
+  gap: 12px;
+}
+
+.relatorio-modal__header-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #6B0F2B;
+}
+
+.relatorio-modal__header-info h2 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 2px;
+}
+
+.relatorio-modal__header-info p {
+  font-size: 12px;
+  color: #666;
+  margin: 0;
+}
+
+.relatorio-modal__close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #999;
+  padding: 2px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  transition: color 0.15s;
+}
+
+.relatorio-modal__close:hover {
+  color: #333;
+}
+
+/* Sections */
+.relatorio-modal__section {
+  padding: 16px 20px;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.relatorio-modal__section h3 {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #888;
+  margin: 0 0 10px;
+}
+
+.relatorio-modal__section h3 em {
+  font-style: normal;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.relatorio-modal__type-grid {
+  display: grid;
+  gap: 8px;
+}
+
+.relatorio-modal__type {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 10px;
+  align-items: flex-start;
+  width: 100%;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  background: #fafafa;
+  color: #6b0f2b;
+  cursor: pointer;
+  padding: 11px 12px;
+  text-align: left;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.relatorio-modal__type:hover,
+.relatorio-modal__type--active {
+  border-color: #6b0f2b;
+  background: #fdf2f5;
+}
+
+.relatorio-modal__type svg {
+  margin-top: 1px;
+  flex-shrink: 0;
+}
+
+.relatorio-modal__type strong,
+.relatorio-modal__type em {
+  display: block;
+  font-family: var(--font-sans);
+}
+
+.relatorio-modal__type strong {
+  color: #1a1a1a;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.relatorio-modal__type em {
+  margin-top: 2px;
+  color: #777;
+  font-size: 11px;
+  font-style: normal;
+  line-height: 1.35;
+}
+
+/* Card auditoria atual */
+.relatorio-modal__card {
+  border-radius: 8px;
+  padding: 10px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+}
+
+.relatorio-modal__card--current {
+  background: #fdf2f5;
+  border: 1px solid #e8c0cc;
+  color: #6B0F2B;
+}
+
+.relatorio-modal__card--current strong {
+  font-size: 12px;
+  color: #6B0F2B;
+}
+
+/* Lista de auditorias históricas */
+.relatorio-modal__lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+.relatorio-modal__item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  background: #fafafa;
+  cursor: pointer;
+  text-align: left;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.relatorio-modal__item:hover {
+  border-color: #c0849a;
+  background: #fdf2f5;
+}
+
+.relatorio-modal__item--selecionado {
+  border-color: #6B0F2B;
+  background: #fdf2f5;
+  color: #6B0F2B;
+}
+
+.relatorio-modal__item-check {
+  color: #6B0F2B;
+  flex-shrink: 0;
+}
+
+.relatorio-modal__item--selecionado .relatorio-modal__item-check {
+  color: #6B0F2B;
+}
+
+.relatorio-modal__item:not(.relatorio-modal__item--selecionado) .relatorio-modal__item-check {
+  color: #ccc;
+}
+
+.relatorio-modal__item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+
+.relatorio-modal__item-info strong {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.relatorio-modal__item-info em {
+  font-style: normal;
+  font-size: 11px;
+  color: #888;
+}
+
+.relatorio-modal__empty {
+  font-size: 13px;
+  color: #999;
+  margin: 0;
+}
+
+.relatorio-modal__erro {
+  font-size: 13px;
+  color: #7f1d1d;
+  background: #fef2f2;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin: 0 0 10px;
+}
+
+/* Footer */
+.relatorio-modal__footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 16px 20px;
+  background: #fafafa;
+  border-top: 1px solid #f0f0f0;
+}
+
+.relatorio-modal__btn-cancelar {
+  padding: 8px 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  background: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  color: #555;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.relatorio-modal__btn-cancelar:hover {
+  background: #f5f5f5;
+}
+
+.relatorio-modal__btn-gerar {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  background: #6B0F2B;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, opacity 0.15s;
+}
+
+.relatorio-modal__btn-gerar:hover:not(:disabled) {
+  background: #8a081e;
+}
+
+.relatorio-modal__btn-gerar:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+@media (max-width: 520px) {
+  .audit-dashboard-header__actions {
+    width: 100%;
+  }
+
+  .audit-dashboard-header .audit-dashboard-btn-relatorio {
+    justify-content: center;
+    width: 100%;
+    min-height: 42px;
+  }
+
+  .relatorio-modal-overlay {
+    align-items: flex-end;
+    padding: 10px;
+  }
+
+  .relatorio-modal {
+    max-height: calc(100vh - 20px);
+    border-radius: 10px;
+  }
+
+  .relatorio-modal__card,
+  .relatorio-modal__footer {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .relatorio-modal__btn-cancelar,
+  .relatorio-modal__btn-gerar {
+    justify-content: center;
+    width: 100%;
+  }
+}

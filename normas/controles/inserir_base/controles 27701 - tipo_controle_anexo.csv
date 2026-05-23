@@ -1,0 +1,4 @@
+ID,tipo_controle,descricao
+0,Controladores de DP,Controles aplicáveis às organizações que determinam as finalidades e os meios do tratamento de dados pessoais.
+1,Operadores de DP,Controles aplicáveis às organizações que realizam tratamento de dados pessoais em nome do controlador.
+2,Ambos,Controles aplicáveis tanto para controladores quanto para operadores de dados pessoais.

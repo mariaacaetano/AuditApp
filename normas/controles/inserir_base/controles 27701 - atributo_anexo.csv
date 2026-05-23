@@ -1,0 +1,17 @@
+ID,atributo_anexo,descricao
+0,condições para coleta e tratamento,"Controles relacionados à definição de bases legais, limitação de finalidade, minimização e critérios para coleta e tratamento de dados pessoais."
+1,obrigações com os titulares de DP,"Controles voltados ao atendimento dos direitos dos titulares de dados pessoais, incluindo acesso, correção, exclusão e portabilidade."
+2,privacidade por design/default,"Controles que garantem a aplicação de privacidade desde a concepção e por padrão em sistemas, processos e serviços."
+3,"compartilhamento, transferência e divulgação de DP","Controles relacionados ao compartilhamento interno/externo, transferência internacional e divulgação autorizada de dados pessoais."
+4,segurança da informação,"Controles destinados à proteção da confidencialidade, integridade e disponibilidade das informações e dados pessoais."
+5,conformidade,"Controles relacionados ao cumprimento de requisitos legais, regulatórios, contratuais e normativos de privacidade e segurança."
+6,governança,"Controles voltados à gestão, definição de responsabilidades, políticas, supervisão e monitoramento da privacidade."
+7,capacitação,"Controles relacionados ao treinamento, conscientização e educação em privacidade e proteção de dados pessoais."
+8,proteção contratual,Controles relacionados à inclusão de cláusulas contratuais de privacidade e segurança em contratos com terceiros e operadores.
+9,segurança física,"Controles voltados à proteção física de ambientes, equipamentos e mídias que armazenam ou processam dados pessoais."
+10,segurança técnica,"Controles técnicos de proteção como criptografia, controle de acesso, autenticação e monitoramento de sistemas."
+11,continuidade,"Controles relacionados à continuidade de negócios, recuperação de desastres e disponibilidade de serviços envolvendo dados pessoais."
+12,monitoramento,"Controles voltados à auditoria, registro, rastreabilidade e monitoramento contínuo de atividades relacionadas aos dados pessoais."
+13,desenvolvimento seguro,Controles relacionados ao desenvolvimento seguro de software e aplicações que tratam dados pessoais.
+14,arquitetura segura,"Controles relacionados à definição de arquiteturas seguras para infraestrutura, aplicações e fluxos de dados pessoais."
+15,terceiros,"Controles voltados à gestão de fornecedores, parceiros e terceiros que possuem acesso ou tratam dados pessoais."

@@ -1,0 +1,69 @@
+version: "3.8"
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: audit_db
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: audit_premium
+      MYSQL_ROOT_PASSWORD: root_secure_password_2026
+      MYSQL_USER: audit_user
+      MYSQL_PASSWORD: audit_secure_password_2026
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-proot_secure_password_2026"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 20s
+    networks:
+      - audit_network
+
+  backend:
+    build:
+      context: ./normas
+      dockerfile: Dockerfile
+    container_name: audit_backend
+    restart: unless-stopped
+    command: sh -c "python manage.py migrate && gunicorn --bind 0.0.0.0:8000 config.wsgi:application"
+    environment:
+      DJANGO_SETTINGS_MODULE: config.settings
+      DEBUG: "False"
+      DB_NAME: audit_premium
+      DB_USER: audit_user
+      DB_PASSWORD: audit_secure_password_2026
+      DB_HOST: db
+      DB_PORT: "3306"
+      ALLOWED_HOSTS: "localhost,127.0.0.1,backend"
+      CORS_ALLOWED_ORIGINS: "http://localhost,http://127.0.0.1,http://localhost:80,http://127.0.0.1:80,http://localhost:5174,http://127.0.0.1:5174"
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - audit_network
+
+  frontend:
+    build:
+      context: ./audit-premium
+      dockerfile: Dockerfile
+    container_name: audit_frontend
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - audit_network
+
+volumes:
+  mysql_data:
+
+networks:
+  audit_network:
+    driver: bridge

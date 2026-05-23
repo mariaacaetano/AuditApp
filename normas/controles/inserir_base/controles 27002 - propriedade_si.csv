@@ -1,0 +1,4 @@
+ID,propriedade_si,descricao
+0,Confidencialidade,Apenas autorizados acessam
+1,Integridade,Garantia de não alteração indevida
+2,Disponibilidade,Informação disponível quando necessária

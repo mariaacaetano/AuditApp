@@ -1,0 +1,1032 @@
+{
+  "auditoria": {
+    "id_auditoria": 3,
+    "empresa": "Mehran Ltda",
+    "norma": "ISO 27701",
+    "data_auditoria": "2026-05-22",
+    "descricao": "esta descrição foi editada",
+    "status": "CONCLUIDA"
+  },
+  "respostas": [
+    {
+      "controle_id": 3,
+      "controle_indice": "A.1.2.4",
+      "controle_titulo": "Determinação de quando e como o consentimento deve ser obtido",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "NAO_CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 2,
+      "controle_indice": "A.1.2.3",
+      "controle_titulo": "Identificação de bases legais",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "NAO_CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 1,
+      "controle_indice": "A.1.2.2",
+      "controle_titulo": "Identificação e documentação do propósito",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "NAO_APLICA",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": [
+        {
+          "id": 1,
+          "descricao": "",
+          "arquivo": "/media/auditoria_3/evidencias/27701_controle_1_103069653.jpeg"
+        }
+      ]
+    },
+    {
+      "controle_id": 4,
+      "controle_indice": "A.1.2.5",
+      "controle_titulo": "Obtenção e registro do consentimento",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 5,
+      "controle_indice": "A.1.2.6",
+      "controle_titulo": "Avaliação de impacto à privacidade",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 7,
+      "controle_indice": "A.1.2.8",
+      "controle_titulo": "Controlador conjunto de DP",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 6,
+      "controle_indice": "A.1.2.7",
+      "controle_titulo": "Contrato com operadores de DP",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 8,
+      "controle_indice": "A.1.2.9",
+      "controle_titulo": "Registros relacionados ao tratamento de DP",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 9,
+      "controle_indice": "A.1.3.2",
+      "controle_titulo": "Determinação e cumprimento de obrigações com titulares de DP",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 10,
+      "controle_indice": "A.1.3.3",
+      "controle_titulo": "Determinação das informações para os titulares de DP",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 11,
+      "controle_indice": "A.1.3.4",
+      "controle_titulo": "Fornecimento de informações aos titulares de DP",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 12,
+      "controle_indice": "A.1.3.5",
+      "controle_titulo": "Fornecimento de mecanismos para modificar ou retirar o consentimento",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 13,
+      "controle_indice": "A.1.3.6",
+      "controle_titulo": "Fornecimento de mecanismo para se opor ao tratamento de DP",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 14,
+      "controle_indice": "A.1.3.7",
+      "controle_titulo": "Acesso, correção ou exclusão",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 15,
+      "controle_indice": "A.1.3.8",
+      "controle_titulo": "Obrigações dos controladores de DP para informar aos terceiros",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 16,
+      "controle_indice": "A.1.3.9",
+      "controle_titulo": "Fornecimento de cópia de DP tratados",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 17,
+      "controle_indice": "A.1.3.10",
+      "controle_titulo": "Tratamento de solicitações",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 18,
+      "controle_indice": "A.1.3.11",
+      "controle_titulo": "Tomada de decisão automatizada",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 19,
+      "controle_indice": "A.1.4.2",
+      "controle_titulo": "Limitação da coleta",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 20,
+      "controle_indice": "A.1.4.3",
+      "controle_titulo": "Limitação do tratamento",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 21,
+      "controle_indice": "A.1.4.4",
+      "controle_titulo": "Precisão e qualidade",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 22,
+      "controle_indice": "A.1.4.5",
+      "controle_titulo": "Objetivos de minimização de DP",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 23,
+      "controle_indice": "A.1.4.6",
+      "controle_titulo": "Desidentificação e exclusão de DP ao final do tratamento",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 24,
+      "controle_indice": "A.1.4.7",
+      "controle_titulo": "Arquivos Temporários",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 25,
+      "controle_indice": "A.1.4.8",
+      "controle_titulo": "Retenção",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 26,
+      "controle_indice": "A.1.4.9",
+      "controle_titulo": "Descarte",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 27,
+      "controle_indice": "A.1.4.10",
+      "controle_titulo": "Controle de transmissão de DP",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 28,
+      "controle_indice": "A.1.5.2",
+      "controle_titulo": "Identificação das bases para transferências de DP entre jurisdições",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 29,
+      "controle_indice": "A.1.5.3",
+      "controle_titulo": "Países e organizações internacionais para os quais os DP podem ser transferidos",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 30,
+      "controle_indice": "A.1.5.4",
+      "controle_titulo": "Registro de transferência de DP",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 31,
+      "controle_indice": "A.1.5.5",
+      "controle_titulo": "Registros de divulgação de DP a terceiros",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 32,
+      "controle_indice": "A.2.2.2",
+      "controle_titulo": "Acordo com o cliente",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 33,
+      "controle_indice": "A.2.2.3",
+      "controle_titulo": "Propósitos da organização",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 34,
+      "controle_indice": "A.2.2.4",
+      "controle_titulo": "Uso para marketing e propaganda",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 35,
+      "controle_indice": "A.2.2.5",
+      "controle_titulo": "Instruções infratoras",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 36,
+      "controle_indice": "A.2.2.6",
+      "controle_titulo": "Obrigações do cliente",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 37,
+      "controle_indice": "A.2.2.7",
+      "controle_titulo": "Registros relativos ao tratamento de DP",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 38,
+      "controle_indice": "A.2.3.2",
+      "controle_titulo": "Compliance com obrigações com os titulares de DP",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 39,
+      "controle_indice": "A.2.4.2",
+      "controle_titulo": "Arquivos Temporários",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 40,
+      "controle_indice": "A.2.4.3",
+      "controle_titulo": "Devolução, transferência ou descarte de DP",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 41,
+      "controle_indice": "A.2.4.4",
+      "controle_titulo": "Controles de transmissão de DP",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 42,
+      "controle_indice": "A.2.5.2",
+      "controle_titulo": "Fundamentação para transferência de DP entre jurisdições",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 43,
+      "controle_indice": "A.2.5.3",
+      "controle_titulo": "Países e organizações internacionais para os quais os DP podem ser transferidos",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 44,
+      "controle_indice": "A.2.5.4",
+      "controle_titulo": "Registros de divulgação de DP a terceiros",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 45,
+      "controle_indice": "A.2.5.5",
+      "controle_titulo": "Notificação de solicitações de divulgação de DP",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 46,
+      "controle_indice": "A.2.5.6",
+      "controle_titulo": "Divulgações de DP legalmente obrigatórias",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 47,
+      "controle_indice": "A.2.5.7",
+      "controle_titulo": "Divulgação de subcontratados utilizados para tratar DP",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 48,
+      "controle_indice": "A.2.5.8",
+      "controle_titulo": "Envolvimento de subcontratado para tratar os DP",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 49,
+      "controle_indice": "A.2.5.9",
+      "controle_titulo": "Troca de subcontratado para tratar os DP",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 50,
+      "controle_indice": "A.3.3",
+      "controle_titulo": "Políticas de segurança da informação",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 51,
+      "controle_indice": "A.3.4",
+      "controle_titulo": "Papéis e responsabilidades em segurança da informação",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 52,
+      "controle_indice": "A.3.5",
+      "controle_titulo": "Classificação da informação",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 53,
+      "controle_indice": "A.3.6",
+      "controle_titulo": "Rotulagem da informação",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 54,
+      "controle_indice": "A.3.7",
+      "controle_titulo": "Transferência de informação",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 55,
+      "controle_indice": "A.3.8",
+      "controle_titulo": "Gestão de identidade",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 56,
+      "controle_indice": "A.3.9",
+      "controle_titulo": "Direitos de acesso",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 57,
+      "controle_indice": "A.3.10",
+      "controle_titulo": "Segurança da informação em contratos com fornecedores",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 58,
+      "controle_indice": "A.3.11",
+      "controle_titulo": "Planejamento e preparação para incidentes",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 59,
+      "controle_indice": "A.3.12",
+      "controle_titulo": "Resposta a incidentes de segurança da informação",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 60,
+      "controle_indice": "A.3.13",
+      "controle_titulo": "Requisitos legais, estatutários, regulatórios e contratuais",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 61,
+      "controle_indice": "A.3.14",
+      "controle_titulo": "Proteção de registros",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 62,
+      "controle_indice": "A.3.15",
+      "controle_titulo": "Análise crítica independente da segurança da informação",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 63,
+      "controle_indice": "A.3.16",
+      "controle_titulo": "Compliance com políticas, regras e normas",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 64,
+      "controle_indice": "A.3.17",
+      "controle_titulo": "Conscientização, educação e treinamento",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 65,
+      "controle_indice": "A.3.18",
+      "controle_titulo": "Acordos de confidencialidade ou não divulgação",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 66,
+      "controle_indice": "A.3.19",
+      "controle_titulo": "Mesa limpa e tela limpa",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 67,
+      "controle_indice": "A.3.20",
+      "controle_titulo": "Mídias de armazenamento",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 68,
+      "controle_indice": "A.3.21",
+      "controle_titulo": "Descarte seguro ou reutilização de equipamentos",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 69,
+      "controle_indice": "A.3.22",
+      "controle_titulo": "Dispositivos endpoint do usuário",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 70,
+      "controle_indice": "A.3.23",
+      "controle_titulo": "Autenticação segura",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 71,
+      "controle_indice": "A.3.24",
+      "controle_titulo": "Backup das informações",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 72,
+      "controle_indice": "A.3.25",
+      "controle_titulo": "Log",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 73,
+      "controle_indice": "A.3.26",
+      "controle_titulo": "Uso de criptografia",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 74,
+      "controle_indice": "A.3.27",
+      "controle_titulo": "Ciclo de vida de desenvolvimento seguro",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 75,
+      "controle_indice": "A.3.28",
+      "controle_titulo": "Requisitos de segurança da aplicação",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 78,
+      "controle_indice": "A.3.31",
+      "controle_titulo": "Informações de teste",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 77,
+      "controle_indice": "A.3.30",
+      "controle_titulo": "Desenvolvimento terceirizado",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 76,
+      "controle_indice": "A.3.29",
+      "controle_titulo": "Princípios de arquitetura e engenharia de sistemas seguros",
+      "norma": "27701",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    }
+  ]
+}

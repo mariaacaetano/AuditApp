@@ -1,0 +1,6 @@
+ID,conceito_si,descricao
+0,Identificar,Identificação de ativos e riscos
+1,Proteger,Implementação de proteção
+2,Detectar,Descoberta de incidentes
+3,Responder,Reação a incidentes
+4,Recuperar,Retorno à operação normal

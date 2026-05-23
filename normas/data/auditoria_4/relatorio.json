@@ -1,0 +1,114 @@
+{
+  "auditoria": {
+    "id_auditoria": 4,
+    "empresa": "Pedro LTDA",
+    "norma": "ISO 27001",
+    "data_auditoria": "2026-05-22",
+    "descricao": "esta descrição foi criada",
+    "status": "INCONCLUIDA"
+  },
+  "respostas": [
+    {
+      "controle_id": 1,
+      "controle_indice": "5.1",
+      "controle_titulo": "políticas de segurança da informação",
+      "norma": "27002",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "asdfghjklç",
+        "justificativa": "asdfgtyhujiop",
+        "possui_andamento": false
+      },
+      "evidencias": [
+        {
+          "id": 1,
+          "descricao": "",
+          "arquivo": "/media/evidencias/auditoria_4/27002/1/103069653.jpeg"
+        },
+        {
+          "id": 2,
+          "descricao": "",
+          "arquivo": "/media/auditoria_4/evidencias/27002_controle_1_103069653.jpeg"
+        }
+      ]
+    },
+    {
+      "controle_id": 2,
+      "controle_indice": "5.2",
+      "controle_titulo": "papéis e responsabilidades pela segurança da informação",
+      "norma": "27002",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "mudei isso agora",
+        "justificativa": "mudei isso agora",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 3,
+      "controle_indice": "5.3",
+      "controle_titulo": "segregação de funções",
+      "norma": "27002",
+      "resposta": {
+        "situacao": "NAO_CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 5,
+      "controle_indice": "5.5",
+      "controle_titulo": "contato com autoridades",
+      "norma": "27002",
+      "resposta": {
+        "situacao": "NAO_CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 4,
+      "controle_indice": "5.4",
+      "controle_titulo": "responsabilidades da direção",
+      "norma": "27002",
+      "resposta": {
+        "situacao": "NAO_CONFORME",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 7,
+      "controle_indice": "5.7",
+      "controle_titulo": "inteligência de ameaças",
+      "norma": "27002",
+      "resposta": {
+        "situacao": "NAO_APLICA",
+        "observacoes": "",
+        "justificativa": "",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    },
+    {
+      "controle_id": 10,
+      "controle_indice": "5.10",
+      "controle_titulo": "uso aceitável de informações e outros ativos associados",
+      "norma": "27002",
+      "resposta": {
+        "situacao": "CONFORME",
+        "observacoes": "asdfghjklç~]",
+        "justificativa": "asdgtyhujkiolpç~´]",
+        "possui_andamento": false
+      },
+      "evidencias": []
+    }
+  ]
+}

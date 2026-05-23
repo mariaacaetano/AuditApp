@@ -1,0 +1,53 @@
+.usuarios-page {
+  --page-bg: #f4efe6;
+  --page-primary: #6b0f2b;
+  --page-accent: #d4c5a9;
+}
+
+@media (max-width: 1180px) {
+  .usuarios-page [style*="grid-template-columns: 1.5fr 1fr 1fr auto"],
+  .usuarios-page [style*="grid-template-columns: 1fr 1.2fr 1.2fr 1fr auto"] {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .usuarios-page {
+    display: block !important;
+  }
+
+  .usuarios-page main {
+    gap: 24px !important;
+    padding: 28px 16px 96px !important;
+  }
+
+  .usuarios-page [style*="font-size: 42px"] {
+    font-size: 34px !important;
+    line-height: 1.08 !important;
+  }
+
+  .usuarios-page section,
+  .usuarios-page [style*="padding: 28"] {
+    padding: 20px !important;
+  }
+
+  .usuarios-page [style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  .usuarios-page [style*="justify-content: space-between"],
+  .usuarios-page [style*="justify-content: flex-end"] {
+    justify-content: stretch !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+  }
+
+  .usuarios-page [style*="max-width: 720"] {
+    max-height: calc(100vh - 24px) !important;
+  }
+
+  .usuarios-page [style*="padding: 30px 34px 24px"],
+  .usuarios-page [style*="padding: 26px 34px 34px"] {
+    padding: 20px !important;
+  }
+}

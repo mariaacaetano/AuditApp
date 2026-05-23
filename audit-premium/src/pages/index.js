@@ -1,0 +1,12 @@
+export { default as AuditoriasPage } from "./AuditoriasPage";
+export { default as CadastroPage } from "./CadastroPage";
+export { default as DashboardAuditoriaPage } from "./DashboardAuditoriaPage";
+export { default as EmpresasPage } from "./EmpresasPage";
+export { default as HomePage } from "./HomePage";
+export { default as LandingPage } from "./LandingPage";
+export { default as LoginPage } from "./LoginPage";
+export { default as NormasPage } from "./NormasPage";
+export { default as PerfilPage } from "./PerfilPage";
+export { default as RespostaAuditoriaPage } from "./RespostaAuditoriaPage";
+export { default as SobreNosPage } from "./SobreNosPage";
+export { default as UsuariosPage } from "./UsuariosPage";

@@ -1,0 +1,5 @@
+ID,propriedade_si,descricao,prop_inclui
+0,Governança e Ecossistema,Governança do SGSI e gestão de riscos,"Governança do Sistema de Segurança da Informação e Gestão de Riscos, Gestão de segurança cibernética do ecossistema"
+1,Proteção,"Arquitetura, IAM, manutenção e segurança física","Arquitetura e Segurança de TI, Gestão de Identidade e Acesso, Manutenção de Segurança de TI, Segurança Físico e Ambiental"
+2,Defesa,Detectar e responder incidentes,"Detectar, Gestão de Incidente de Segurança Computacional"
+3,Resiliência,Continuidade e gestão de crises,"Operações de Continuidade, Gestão de Crises"

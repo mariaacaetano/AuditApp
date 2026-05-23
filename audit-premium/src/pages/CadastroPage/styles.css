@@ -1,0 +1,104 @@
+.cadastro-page {
+  --page-bg: #6b0f2b;
+  --page-surface: #d4c5a9;
+  --page-primary: #6b0f2b;
+}
+
+.cadastro-page.auth-page {
+  padding: 24px;
+}
+
+.cadastro-page .auth-card {
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+}
+
+.cadastro-page__password-help {
+  margin-top: 10px;
+  border: 1px solid rgba(107, 15, 43, 0.16);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.18);
+  padding: 10px 12px;
+}
+
+.cadastro-page__password-help strong {
+  display: block;
+  color: #6b0f2b;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.cadastro-page__password-help ul {
+  display: grid;
+  gap: 6px;
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cadastro-page__password-help li {
+  display: grid;
+  grid-template-columns: 12px minmax(0, 1fr);
+  gap: 8px;
+  align-items: start;
+  color: rgba(107, 15, 43, 0.68);
+  font-family: var(--font-sans);
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.cadastro-page__password-help li::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  margin-top: 5px;
+  border-radius: 50%;
+  background: rgba(107, 15, 43, 0.32);
+}
+
+.cadastro-page__password-help li.is-valid {
+  color: #14532d;
+}
+
+.cadastro-page__password-help li.is-valid::before {
+  background: #14532d;
+}
+
+.cadastro-page__password-help li.is-invalid {
+  color: #7f1d1d;
+}
+
+.cadastro-page__password-help li.is-invalid::before {
+  background: #7f1d1d;
+}
+
+@media (max-width: 560px) {
+  .cadastro-page.auth-page {
+    align-items: stretch !important;
+    padding: 16px;
+  }
+
+  .cadastro-page .auth-card {
+    max-height: none;
+    padding: 26px 22px !important;
+  }
+
+  .cadastro-page .auth-card__logo {
+    height: 58px !important;
+  }
+
+  .cadastro-page .auth-card__brand {
+    margin-bottom: 14px !important;
+    font-size: 30px !important;
+    line-height: 1.1;
+    text-align: center;
+  }
+
+  .cadastro-page .auth-card__title {
+    font-size: 20px !important;
+  }
+}

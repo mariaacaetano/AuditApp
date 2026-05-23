@@ -1,0 +1,55 @@
+.empresas-page {
+  --page-bg: #f4efe6;
+  --page-primary: #6b0f2b;
+  --page-accent: #d4c5a9;
+}
+
+@media (max-width: 760px) {
+  .empresas-page {
+    display: block !important;
+  }
+
+  .empresas-page main {
+    gap: 24px !important;
+    padding: 28px 16px 96px !important;
+  }
+
+  .empresas-page h1,
+  .empresas-page [style*="font-size: 42px"] {
+    font-size: 34px !important;
+    line-height: 1.08 !important;
+  }
+
+  .empresas-page form [style*="grid-template-columns"],
+  .empresas-page main > div[style*="grid-template-columns"],
+  .empresas-page [style*="grid-template-columns: 1fr 1fr"],
+  .empresas-page [style*="grid-template-columns: repeat(2, 1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  .empresas-page [style*="padding: 24px 32px"],
+  .empresas-page [style*="padding: 32px"] {
+    padding: 20px !important;
+  }
+
+  .empresas-page form {
+    padding-right: 20px !important;
+    padding-left: 20px !important;
+  }
+
+  .empresas-page [style*="justify-content: space-between"] {
+    align-items: flex-start !important;
+    flex-wrap: wrap !important;
+    gap: 12px !important;
+  }
+
+  .empresas-page [style*="justify-content: flex-end"] {
+    justify-content: stretch !important;
+    flex-wrap: wrap !important;
+  }
+
+  .empresas-page button[style*="letter-spacing: 2px"] {
+    flex: 1 1 150px !important;
+    min-width: 0 !important;
+  }
+}

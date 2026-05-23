@@ -1,0 +1,47 @@
+.login-page {
+  --page-bg: #6b0f2b;
+  --page-surface: #d4c5a9;
+  --page-primary: #6b0f2b;
+}
+
+.auth-page {
+  padding: 24px;
+}
+
+.auth-card {
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+}
+
+@media (max-width: 560px) {
+  .auth-page {
+    align-items: stretch !important;
+    padding: 16px;
+  }
+
+  .auth-card {
+    max-height: none;
+    min-height: calc(100vh - 32px);
+    justify-content: center;
+    padding: 28px 22px !important;
+  }
+
+  .auth-card__logo {
+    height: 62px !important;
+  }
+
+  .auth-card__brand {
+    margin-bottom: 16px !important;
+    font-size: 30px !important;
+    line-height: 1.1;
+    text-align: center;
+  }
+
+  .auth-card__title {
+    font-size: 20px !important;
+  }
+
+  .auth-card__subtitle {
+    margin-bottom: 18px !important;
+  }
+}

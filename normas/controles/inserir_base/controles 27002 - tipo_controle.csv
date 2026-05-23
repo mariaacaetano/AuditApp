@@ -1,0 +1,4 @@
+ID,tipo_controle,descricao
+0,Preventivo,Evitar a ocorrência de incidentes
+1,Detectivo,Atua quando ocorre um incidente
+2,Corretivo,Atua após um incidente

@@ -100,7 +100,7 @@ export DJANGO_SETTINGS_MODULE=config.settings
 export DEBUG=True
 export DB_NAME=audit_premium
 export DB_USER=audit_user
-export DB_PASSWORD=audit_secure_password_2026
+export DB_PASSWORD= Defina sua senha
 export DB_HOST=127.0.0.1
 export DB_PORT=3307
 ```

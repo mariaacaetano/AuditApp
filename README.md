@@ -17,6 +17,7 @@ A aplicação permite:
 # Tutorial de Instalação
 
 Este tutorial descreve o processo completo de implantação da aplicação **Audit Premium** em uma instância **Amazon EC2 (Amazon Linux 2023)** utilizando Docker e Docker Compose.
+Acessar vídeos: https://drive.google.com/drive/folders/1dbJcM725XClHxH2SrHnKk2RYeESlfw0z?usp=sharing
 
 ---
 
@@ -335,23 +336,3 @@ docker logs audit_frontend --tail=100
 ```bash
 docker ps
 ```
-
----
-
-# Resultado Esperado
-
-Ao final da instalação:
-
-✅ Instância EC2 configurada
-
-✅ Docker e Docker Compose instalados
-
-✅ Banco de dados MySQL em execução
-
-✅ Backend Django funcionando
-
-✅ Frontend disponível pela Internet
-
-✅ Usuário administrador criado
-
-✅ Aplicação Audit Premium acessível através do IP público da instância

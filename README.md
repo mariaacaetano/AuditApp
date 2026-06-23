@@ -2,210 +2,176 @@
 
 Sistema acadêmico para apoio a auditorias de segurança da informação, com foco em normas ISO/IEC 27002 e ISO/IEC 27701. A aplicação permite cadastrar empresas, criar auditorias, responder controles, anexar evidências, acompanhar dashboards, gerar relatórios e administrar usuários/códigos de acesso.
 
-## Tecnologias
+# Tutorial de Instalação
+Este tutorial de instalação deve ser utilizado para fazer a instalação da aplicação e suas dependências na instância EC2, após a mesma ter sido criada e estar conectada.
 
-- Frontend: React, Vite, CSS, lucide-react
-- Backend: Django, Django REST Framework, Simple JWT
-- Banco de dados: MySQL 8.0
-- Infraestrutura: Docker, Docker Compose, Nginx, Gunicorn
+### Instalar Git, Docker e Docker Compose
 
-## Estrutura
-
-```text
-AuditApp/
-├── audit-premium/          # Frontend React/Vite
-├── normas/                 # Backend Django
-│   ├── controles/          # Normas, controles, empresas, auditorias, respostas e evidências
-│   ├── users/              # Usuários, autenticação, códigos de acesso e logs
-│   └── config/             # Configurações Django
-├── docs/                   # Diagramas e documentação UML
-└── docker-compose.yml      # Orquestração dos serviços
-```
-
-## Pré-requisitos
-
-Para execução com Docker:
-
-- Docker
-- Docker Compose
-
-Para execução local sem Docker:
-
-- Python 3.12+
-- Node.js 22+
-- MySQL 8.0+
-- Dependências de compilação do `mysqlclient` no sistema operacional
-
-## Instalação com Docker
-
-Na raiz do projeto:
-
+1. Atualizar os pacotes
 ```bash
-docker compose up --build
+sudo yum update -y
 ```
 
-Serviços publicados:
-
-- Frontend: `http://localhost`
-- Backend/API: `http://localhost:8000`
-- MySQL: `localhost:3307`
-
-O backend executa as migrations automaticamente ao iniciar:
-
+2. Instalar o Git
 ```bash
-python manage.py migrate
+sudo yum install git -y
 ```
 
-### Criar usuário administrador
-
-Com os containers em execução:
-
+3. Instalar o Docker
 ```bash
-docker compose exec backend python manage.py createsuperuser
+sudo dnf install docker -y
 ```
 
-Depois, acesse:
-
-```text
-http://localhost/login
-```
-
-## Execução local para desenvolvimento
-
-### 1. Banco de dados
-
-Você pode usar o MySQL do Docker:
-
+4. Iniciar o Docker
 ```bash
-docker compose up db
+sudo systemctl start docker
 ```
 
-Ele ficará disponível em `localhost:3307`.
-
-### 2. Backend Django
-
-Em outro terminal:
-
+5. Configurar o docker para iniciar automaticamente
 ```bash
-cd normas
-python -m venv .venv
-source .venv/bin/activate
+sudo systemctl enable docker
+```
+
+6. Adicionar o usuário ec2-user ao grupo do Docker
+```bash
+sudo usermod -aG docker ec2-user
+```
+
+7. Depois disso, sair da aba de conexão e abrir de novo.
+```bash
+exit
+```
+
+(Conectar novamente)
+8. Verificando a instalação do Docker
+```bash
+docker --version
+```
+
+9. Baixar o executável do Docker Compose (para evitar erros posteriores)
+```bash
+sudo curl -L "https://github.com/docker/compose/releases/download/v2.27.0/docker-compose-linux-x86_64" -o /usr/local/bin/docker-compose
+```
+
+Conceder permissão de execução ao arquivo Docker Compose
+```bash
+sudo chmod +x /usr/local/bin/docker-compose
+```
+
+Verificando a instalação do Docker Compose
+```bash
+docker-compose --version
+```
+### Aplicação
+
+Clonando o repositório da aplicação
+```bash
+git clone https://github.com/mariaacaetano/AuditApp.git
+```
+
+Trocando para o repositório da aplicação
+```bash
+cd AuditApp
+```
+
+Conferir conteúdo baixado
+```bash
+ls -la
+```
+
+Abrir arquivo para edição (para incluir o IP no CORS)
+```bash
+nano docker-compose.yml
+```
+```bash
+ALLOWED_HOSTS: "localhost,127.0.0.1,backend,auditapp.lsx.li,13.218.34.212"
+CORS_ALLOWED_ORIGINS: "http://localhost,http://127.0.0.1,http://localhost:5173,http://127.0.0.1:5173,https://
+auditapp.lsx.li,http://13.218.34.212"
+```
+
+Subir a aplicação com Docker Compose
+```bash
+docker-compose up -d --build
+```
+
+Verificar os containers
+```bash
+docker ps
+```
+
+Criar um superadmin (necessário para a aplicação)
+```bash
+docker exec -it audit_backend python manage.py createsuperuser
+```
+
+Fazer uma requisição HTTP para o endpoint de autenticação da API, testando a aplicação localmente
+```bash
+curl -i -X POST http://localhost:8000/api/auth/login/ \
+-H "Content-Type: application/json" \
+-d '{"username":"admin","password":"admin"}'
+```
+
+Fazer uma requisição HTTP para o endpoint de autenticação da API, testando a aplicação pelo Nginx público
+```bash
+curl -i -X POST http://13.218.34.212/api/auth/login/ \
+-H "Content-Type: application/json" \
+-d '{"username":"admin","password":"admin"}'
+```
+
+### Fazer teste com o IP aberto em uma nova aba ou dispositivo
+
+Conferir o arquivo de configuração do Nginx utilizado pelo container do frontend, para verificar como as requisições são tratadas e encaminhadas para o backend da aplicação
+```bash
+docker exec audit_frontend cat /etc/nginx/conf.d/default.conf
+```
+
+### Banco de dados da aplicação
+
+Atualizar os pacotes
+```bash
+sudo yum update -y
+```
+
+Instalar as dependencias necessárias para compilar bibliotecas Python
+```bash
+sudo yum install -y gcc python3-devel pkgconfig openssl-devel mariadb-connector-c mariadb-connector-c-devel
+```
+
+Ir ao diretório da aplicação (lembrar de conferir as intalações no requirements.txt)
+```bash
+cd AuditApp/
+```
+
+Ativar o ambiente virtual
+```bash
+source venv/bin/activate
+```
+
+Fazer a instalação dos pacotes
+```bash
 pip install -r requirements.txt
 ```
 
-Defina as variáveis de ambiente para conectar ao MySQL local exposto pelo Docker:
-
+Caso não dê certo, fazer a instalação manualmente
 ```bash
-export DJANGO_SETTINGS_MODULE=config.settings
-export DEBUG=True
-export DB_NAME=audit_premium
-export DB_USER=audit_user
-export DB_PASSWORD= Defina sua senha
-export DB_HOST=127.0.0.1
-export DB_PORT=3307
+python3 -m pip install asgiref Django django-cors-headers django-extensions djangorestframework djangorestframework_simplejwt mysqlclient pillow PyJWT PyMySQL sqlparse gunicorn
 ```
 
-Execute as migrations e suba o servidor:
-
+Levantar o banco de dados
 ```bash
-python manage.py migrate
-python manage.py runserver 0.0.0.0:8000
+docker-compose up -d db
+docker-compose run --rm backend python manage.py migrate
+docker-compose run --rm backend python controles/inserir_base/inserir_base.py
 ```
 
-### 3. Frontend React
-
-Em outro terminal:
-
+Se o backend já estiver rodando
 ```bash
-cd audit-premium
-npm install
-npm run dev
+docker-compose exec backend python manage.py migrate
+docker-compose exec backend python controles/inserir_base/inserir_base.py
 ```
 
-O Vite normalmente abre em:
 
-```text
-http://localhost:5173
-```
 
-O arquivo `vite.config.js` já possui proxy para:
 
-- `/api`
-- `/controles`
-- `/media`
 
-## Comandos úteis
 
-Backend:
-
-```bash
-cd normas
-python manage.py makemigrations
-python manage.py migrate
-python manage.py createsuperuser
-python manage.py runserver
-```
-
-Frontend:
-
-```bash
-cd audit-premium
-npm run dev
-npm run build
-npm run lint
-```
-
-Docker:
-
-```bash
-docker compose up --build
-docker compose down
-docker compose logs -f backend
-docker compose logs -f frontend
-docker compose logs -f db
-```
-
-## Rotas principais
-
-Frontend:
-
-- `/login`
-- `/cadastro`
-- `/home`
-- `/empresas`
-- `/auditorias`
-- `/auditorias/:id_auditoria/responder`
-- `/auditorias/:id_auditoria/dashboard`
-- `/normas`
-- `/usuarios`
-- `/sobre`
-
-Backend:
-
-- `/api/auth/login/`
-- `/api/auth/register/`
-- `/api/auth/token/refresh/`
-- `/api/admin/usuarios/`
-- `/api/admin/codigos-acesso/`
-- `/controles/normas/`
-- `/controles/empresas/view`
-- `/controles/auditorias/view`
-- `/controles/auditorias/create/`
-- `/controles/auditoria/<id>/27002/retomar/`
-- `/controles/auditoria/<id>/27701/retomar/`
-
-## Documentação e diagramas
-
-A documentação UML fica em:
-
-- `docs/diagrama-classes.md`
-- `docs/diagramas-uml.md`
-- `docs/diagramas-uml.html`
-
-A página `/sobre` também exibe a seção **Documentação**, com diagramas do sistema.
-
-## Observações
-
-- O arquivo `docker-compose.yml` usa credenciais de desenvolvimento para o banco MySQL.
-- Para produção, altere senhas, `SECRET_KEY`, `DEBUG`, `ALLOWED_HOSTS` e `CORS_ALLOWED_ORIGINS`.
-- O volume `mysql_data` mantém os dados do banco entre reinicializações dos containers.

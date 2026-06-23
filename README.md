@@ -1,6 +1,13 @@
-# Audit Premium
+# Apresentação do Projeto AWS
 
-Sistema acadêmico para apoio a auditorias de Segurança da Informação, com foco nas normas **ISO/IEC 27002** e **ISO/IEC 27701**.
+- **Atividade Proposta:** Hospedar uma página web em nuvem, utilizando a AWS;
+- **Alunos:** Maria Fernanda Caetano e Pedro Henrique Moreira Montes
+- **Disciplina:** Computação em Nuvem
+- **Professor:** Marco Antonio Torres Rojas
+
+# 1. Apresentação da Aplicação
+
+Utilizamos o sistema Audit Premium, um sistema acadêmico desenvolvido pela mesma dupla neste semestre. O sistema tem o objetivo de oferecer apoio a auditorias de Segurança da Informação, com foco nas normas **ISO/IEC 27002** e **ISO/IEC 27701**.
 
 A aplicação permite:
 
@@ -12,97 +19,115 @@ A aplicação permite:
 * Geração de relatórios;
 * Administração de usuários e códigos de acesso.
 
----
+Este tutorial descreve o processo completo de implantação da aplicação **Audit Premium** em uma instância **Amazon EC2 (Amazon Linux 2023)** utilizando Docker e Docker Compose. Além do tutorial presente neste documento, e possível acompanhar a instalação feita antes de produzi-lo através dos vídeos gravados durante o processo:
 
-# Tutorial de Instalação
-
-Este tutorial descreve o processo completo de implantação da aplicação **Audit Premium** em uma instância **Amazon EC2 (Amazon Linux 2023)** utilizando Docker e Docker Compose.
-
-Acessar vídeos: https://drive.google.com/drive/folders/1dbJcM725XClHxH2SrHnKk2RYeESlfw0z?usp=sharing
+- Acessar vídeos: https://drive.google.com/drive/folders/1dbJcM725XClHxH2SrHnKk2RYeESlfw0z?usp=sharing
 
 ---
+# 2. Tutorial EC2
 
-## 1. Preparação da Instância EC2
+Esta seção tem como finalidade mostrar, passo a passo, como iniciar a instância EC2 através do Learner Lab, ferramenta utilizada para acessar o ambiente da AWS, oferecido na disciplina de Computação em Nuvem para a qual o presente projeto se destina.
 
-Após criar e acessar a instância EC2, execute os comandos abaixo.
+## 2.1 Abrir o Learner Lab
 
-### Atualizar os pacotes do sistema
+- Ao entrar na AWS Academy, abrir o Learner Lab em **Painel de Controle**;
+- Acessar **Módulos** e procurar pelo módulo "Laboratório de aprendizagem da AWS Academy"
+- Acessar **Iniciar os laboratórios de aprendizagem da AWS Academy";
+- Aguardar o carregamento da página;
+- Ao surgir o menu superior, procurar pelo botão **Start Lab**;
+- Aguardar o botão **ASWS** ficar verde e clicar para abrir o ambiente AWS em uma nova guia.
+
+## 2.2 Iniciar uma Instância EC2
+
+- Procurar por "EC2" na barra de pesquisa do menu superior do ambiente AWS (No vídeo, ele aparece em "Visitado Recentemente', pois foi acessado algumas vezes antes de fazer o vídeo para entender como a plataforma funcionava. Mas no primeiro acesso, é necessário procurar na barra de pesquisa);
+- Na nova paǵina, procurar pelo botão amarelo/laranja **Executar Instânica**;
+- Ela levará à uma página para selecionar a ocnfiguração da instância. A configuração deve ser:
+  - **Nome da Tag:** Servidor Audit Premium (ou o nome que for melhor no momento);
+  - **Imagem da aplicação:** AMI do Amazaon Linux 2023 kernel-6.1;
+  - **Arquitetura:** 64 bits;
+  - **Tipo da Instância:** t3.micro (escolhida por ter custo menor e ser mais recente, o que seria relevante em um projeto real);
+  - **Par de Chaves:** vockey (tipo rsa);
+  - **Configuração de Rede -> Criar grupo de Segurança:** Permitir tráfego SSH e Permitir tráfego HTTP da INternet;
+- Executar a instância.
+
+## 2.3 Conectar uma instância EC2
+
+- Ir até EC2 > Instância;
+- Selecionar a instância criada para este projeto;
+- Selecionar **Conectar**;
+- Na nova página, selecionar **Conectar-se a um IP Público**;
+- Manter nome do usuário "ec2-user" (ou trocar, caso seja relevante);
+- Selecionar o botão laranja/amarelo **Conectar**;
+  
+---
+
+## 3. Tutorial de Instalação das Dependências
+
+Após criar e acessar a instância EC2 e conectá-la, como explicado nos tópicos anteriores, no terminal aberto na nova guia seguir os passo a seguir:
+
+### 3.1 Atualizar os pacotes do sistema
 
 ```bash
 sudo yum update -y
 ```
 
-### Instalar o Git
+### 3.2 Instalar o Git
 
 ```bash
 sudo yum install git -y
 ```
 
-### Instalar o Docker
+### 3.3 Instalar o Docker
 
 ```bash
 sudo dnf install docker -y
 ```
 
-### Iniciar o serviço Docker
+### 3.4 Iniciar o serviço Docker
 
 ```bash
 sudo systemctl start docker
 ```
 
-### Habilitar inicialização automática do Docker
+### 3.5 Habilitar inicialização automática do Docker
 
 ```bash
 sudo systemctl enable docker
 ```
 
-### Adicionar o usuário ao grupo Docker
+### 3.6 Adicionar o usuário ao grupo Docker
 
 ```bash
 sudo usermod -aG docker ec2-user
 ```
 
-### Encerrar a sessão
+### 3.7 Encerrar a sessão
 
 ```bash
 exit
 ```
-
 Conecte-se novamente à instância para que as permissões sejam aplicadas.
 
----
 
-## 2. Verificar Instalação do Docker
-
-### Verificar versão instalada
+### 3.8 Verificar versão instalada
 
 ```bash
 docker --version
 ```
 
-Exemplo:
-
-```bash
-Docker version 28.x.x
-```
-
----
-
-## 3. Instalação do Docker Compose
-
-### Baixar o executável
+### 3.9 Baixar o executável
 
 ```bash
 sudo curl -L "https://github.com/docker/compose/releases/download/v2.27.0/docker-compose-linux-x86_64" -o /usr/local/bin/docker-compose
 ```
 
-### Conceder permissão de execução
+### 3.10 Conceder permissão de execução
 
 ```bash
 sudo chmod +x /usr/local/bin/docker-compose
 ```
 
-### Verificar instalação
+### 3.11 Verificar instalação
 
 ```bash
 docker-compose --version
@@ -112,28 +137,25 @@ docker-compose --version
 
 # 4. Clonando o Projeto
 
-### Clonar o repositório
+### 4.1 Clonar o repositório
 
 ```bash
 git clone https://github.com/mariaacaetano/AuditApp.git
 ```
 
-### Acessar o diretório
+### 4.2 Acessar o diretório
 
 ```bash
 cd AuditApp
 ```
 
-### Verificar arquivos baixados
+### 4.3 Verificar arquivos baixados
 
 ```bash
 ls -la
 ```
 
----
-
-# 5. Configuração do Endereço IP
-
+### 4.4 Atualizar o IP permitido (IP da Instância)
 Abra o arquivo:
 
 ```bash
@@ -144,6 +166,7 @@ Localize as variáveis:
 
 ```yaml
 ALLOWED_HOSTS:
+
 CORS_ALLOWED_ORIGINS:
 ```
 
@@ -165,51 +188,28 @@ CORS_ALLOWED_ORIGINS: "http://localhost,http://127.0.0.1,http://localhost:5173,h
 
 ---
 
-# 6. Inicialização da Aplicação
+# 5. Inicialização da Aplicação
 
-### Construir e iniciar os containers
+### 5.1 Construir e iniciar os containers
 
 ```bash
 docker-compose up -d --build
 ```
 
-### Verificar containers ativos
+### 5.2 Verificar containers ativos
 
 ```bash
 docker ps
 ```
 
-Resultado esperado:
-
-```bash
-audit_frontend
-audit_backend
-audit_db
-```
-
----
-
-# 7. Criação do Usuário Administrador
-
-Criar o superusuário do Django:
+### 5.3 Criar o superusuário do Django:
+Usar o esquema admin-admin para este exemplo
 
 ```bash
 docker exec -it audit_backend python manage.py createsuperuser
 ```
 
-Exemplo:
-
-```text
-Username: admin
-Email: admin@auditapp.com
-Password: ********
-```
-
----
-
-# 8. Teste da API
-
-### Teste local do backend
+### 5.4 Teste local do backend
 
 ```bash
 curl -i -X POST http://localhost:8000/api/auth/login/ \
@@ -217,15 +217,7 @@ curl -i -X POST http://localhost:8000/api/auth/login/ \
 -d '{"username":"admin","password":"admin"}'
 ```
 
-Resultado esperado:
-
-```bash
-HTTP/1.1 200 OK
-```
-
----
-
-### Teste público via Nginx
+### 5.5 Teste público via Nginx
 
 Substitua pelo IP da sua instância:
 
@@ -235,39 +227,18 @@ curl -i -X POST http://SEU_IP_PUBLICO/api/auth/login/ \
 -d '{"username":"admin","password":"admin"}'
 ```
 
-Exemplo:
 
-```bash
-curl -i -X POST http://54.234.151.6/api/auth/login/ \
--H "Content-Type: application/json" \
--d '{"username":"admin","password":"admin"}'
-```
-
-Resultado esperado:
-
-```bash
-HTTP/1.1 200 OK
-```
-
----
-
-# 9. Acesso à Aplicação
+# 6. Acesso à Aplicação
 
 Abra um navegador e acesse:
 
 ```text
 http://SEU_IP_PUBLICO
+
+exemplo: http://54.234.151.6
 ```
 
-Exemplo:
-
-```text
-http://54.234.151.6
-```
-
----
-
-# 10. Verificação do Proxy Nginx
+# 7. Verificação do Proxy Nginx
 
 Caso haja problemas de comunicação entre frontend e backend:
 
@@ -277,11 +248,11 @@ docker exec audit_frontend cat /etc/nginx/conf.d/default.conf
 
 Esse arquivo define as regras de proxy reverso utilizadas pelo frontend.
 
----
 
-# 11. Banco de Dados
 
-## Instalar dependências
+# 8. Banco de Dados
+
+## 8.1 Instalar dependências
 
 ```bash
 sudo yum update -y
@@ -293,9 +264,7 @@ sudo yum install -y gcc python3-devel pkgconfig openssl-devel mariadb-connector-
 
 ---
 
-## Aplicar Migrações
-
-Se o backend estiver em execução:
+## 8.2 Aplicar Migrações
 
 ```bash
 docker-compose exec backend python manage.py migrate
@@ -303,7 +272,7 @@ docker-compose exec backend python manage.py migrate
 
 ---
 
-## Inserir Dados Iniciais
+## 8.3 Inserir Dados Iniciais
 
 ```bash
 docker-compose exec backend python controles/inserir_base/inserir_base.py
@@ -311,7 +280,7 @@ docker-compose exec backend python controles/inserir_base/inserir_base.py
 
 ---
 
-# 12. Comandos Úteis
+# 9. Comandos Úteis
 
 ### Reiniciar aplicação
 
